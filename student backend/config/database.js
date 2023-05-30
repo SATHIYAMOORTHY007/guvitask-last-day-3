@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema
 const dbConnect = async () => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/studentmentor', {
+    await mongoose.connect(process.env.Mongodb, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       autoIndex: true,
